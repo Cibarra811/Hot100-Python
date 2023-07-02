@@ -1,8 +1,8 @@
 import streamlit as st 
+import pandas as pd
 import plotly.express as px 
-import pickle
 
-df = pickle.load['ml_df.pkl']
+df = pd.read_csv('ml_df.csv')
 
 col1, col2 = st.columns(2)
 

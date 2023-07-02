@@ -2,7 +2,7 @@ import streamlit as st
 import pandas  as pd
 import pickle
 
-df = pickle.load('ml_df.pkl')
+df = pd.read_csv('ml_df.csv')
 
 st.title("DataFrame")
 

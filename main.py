@@ -29,9 +29,9 @@ classifier_name = st.sidebar.selectbox("Select Classifier", ("KNN", "SVM", "Rand
 
 def get_dataset(dataset_name):
     if dataset_name == "ML_DF":
-        data = pickle.load('ml_df.pkl')
+        data = pd.read_csv('ml_df.csv')
     else:
-        data = pickle.load('ml_df.pkl')
+        data = pd.read_csv('ml_df.csv')
     X = data.drop(columns='top_hit_pos')
     y = data['top_hit_pos']
     numerical_ix = X.select_dtypes(include=['int64', 'float64']).columns
