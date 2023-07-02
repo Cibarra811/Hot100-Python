@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.express as px 
 import pickle
 
-df = pickle.load['df']
+df = pickle.load['ml_df.pkl']
 
 col1, col2 = st.columns(2)
 
