@@ -1,7 +1,8 @@
 import streamlit as st 
 import plotly.express as px 
+import pickle
 
-df = st.session_state['df']
+df = pickle.load['df']
 
 col1, col2 = st.columns(2)
 

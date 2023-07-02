@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd 
 import numpy as np
 import seaborn as sns
+import pickle
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC 
 from sklearn.ensemble import RandomForestClassifier
@@ -28,9 +29,9 @@ classifier_name = st.sidebar.selectbox("Select Classifier", ("KNN", "SVM", "Rand
 
 def get_dataset(dataset_name):
     if dataset_name == "ML_DF":
-        data = pd.read_pickle('ml_df.pkl')
+        data = pickle.load('ml_df.pkl')
     else:
-        data = pd.read_pickle('ml_df.pkl')
+        data = pickle.load('ml_df.pkl')
     X = data.drop(columns='top_hit_pos')
     y = data['top_hit_pos']
     numerical_ix = X.select_dtypes(include=['int64', 'float64']).columns

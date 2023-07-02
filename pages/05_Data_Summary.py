@@ -1,8 +1,8 @@
 import streamlit as st 
 import pandas  as pd
-import numpy as np
+import pickle
 
-df = pd.read_pickle('ml_df.pkl')
+df = pickle.load('ml_df.pkl')
 
 st.title("DataFrame")
 
